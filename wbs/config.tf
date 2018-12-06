@@ -29,7 +29,7 @@ resource "aws_instance" "Base-CentOS" {
  connection {
     type = "ssh"
     user = "centos"
-    private_key = "${file("~/pl-deploy.pem")}" ### provide the key
+    private_key = "${file("$WORKSPACE/pl-deploy.pem")}" ### provide the key
     timeout = "4m"
     agent = false
 }
