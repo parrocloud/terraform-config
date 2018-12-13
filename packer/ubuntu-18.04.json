@@ -12,9 +12,9 @@
     "source_ami": "ami-0ac019f4fcb7cb7e6",
     "instance_type": "t2.small",
     "ssh_username": "ubuntu",
-    "ami_name": "Base-Ubuntu {{timestamp}}",
+    "ami_name": "Base-Ubuntu-18 {{timestamp}}",
     "tags": {
-      "Name": "Base-Ubuntu"
+      "Name": "Base-Ubuntu-18"
   }
 }
 ],
