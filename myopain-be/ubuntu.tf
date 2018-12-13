@@ -28,7 +28,7 @@ resource "aws_instance" "Base-Ubuntu" {
 	provisioner "remote-exec" {
  connection {
     type = "ssh"
-    user = "centos"
+    user = "ubuntu"
     private_key = "${file("/var/lib/jenkins/workspace/NewInstance-Terraform-BE/pl-deploy.pem")}" ### provide the key
     timeout = "4m"
     agent = false
