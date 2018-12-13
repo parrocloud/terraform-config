@@ -2,7 +2,7 @@ provider "aws" {
   region     = "us-east-1"
 }
 
-data "aws_ami" "Base-Ubuntu" {
+data "aws_ami" "Base-Ubuntu-16" {
   filter {
     name   = "state"
     values = ["available"]
@@ -10,14 +10,14 @@ data "aws_ami" "Base-Ubuntu" {
 
   filter {
     name = "tag:Name"
-    values = ["Base-Ubuntu"]
+    values = ["Base-Ubuntu-16"]
   }
 
   most_recent = true
 }
 
-resource "aws_instance" "Base-Ubuntu" {
-  ami           = "${data.aws_ami.Base-Ubuntu.id}"
+resource "aws_instance" "Base-Ubuntu-16" {
+  ami           = "${data.aws_ami.Base-Ubuntu-16.id}"
   instance_type = "t2.small"
   security_groups = ["PL-default"]
   iam_instance_profile = "PL-CodeDeployEC2"
